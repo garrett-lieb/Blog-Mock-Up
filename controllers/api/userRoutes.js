@@ -5,10 +5,10 @@ const { User, Blog } = require('../../models');
 router.post('/', async (req, res) => {
     // need to change req.body to match the form?
     console.log("message", req.body)
-    // const userInput = req.body;
+    const userInput = req.body;
     try {
         console.log("message2", req.body)
-        const userData = await User.create(req.body);
+        const userData = await User.create(userInput);
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.username = userData.username;

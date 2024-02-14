@@ -1,18 +1,15 @@
 const router = require('express').Router();
-const htmlroutes = require('./htmlroutes');
+
+const homeroutes = require('./homeRoutes');
 const apiroutes = require('./api');
-router.use('/', htmlroutes);
+
+router.use('/', homeroutes);
 router.use('/api', apiroutes);
 
-
-
-
-
-
+// log 404 when a route is not found
 router.use((req, res) => {
-  res.send('<h1>Hello World</h1>');
+  res.send('<h1>404!!!</h1>');
 });
-
 
 
 module.exports = router;
