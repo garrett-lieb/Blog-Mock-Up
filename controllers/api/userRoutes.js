@@ -4,11 +4,11 @@ const { User, Blog } = require('../../models');
 
 router.post('/', async (req, res) => {
     // need to change req.body to match the form?
-    console.log("message")
-    const userInput = req.body;
+    console.log("message", req.body)
+    // const userInput = req.body;
     try {
         console.log("message2", req.body)
-        const userData = await User.create(userInput);
+        const userData = await User.create(req.body);
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.username = userData.username;
@@ -44,6 +44,16 @@ router.post ('/login', async (req, res) => {
         });
     } catch (err) {
         res.status(400).json(err);
+    }
+});
+
+router.post('/logout', (req, res) => {
+    if (req.session.logged_in) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    } else {
+        res.status(404).end();
     }
 });
 
