@@ -8,7 +8,6 @@ Blog.belongsTo(User, {
 });
 
 
-
 User.hasMany(Blog, {
     foreignKey: 'userID',
     onDelete: 'CASCADE'
@@ -36,4 +35,4 @@ Comment.belongsTo(User, {
 
 
 
-module.exports = { User, Blog };
+module.exports = { User, Blog, Comment };
