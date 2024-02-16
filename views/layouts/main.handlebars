@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {{!-- add tailwind cdn --}}
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="login">Login or Sign Up</a></li>
-        <li><a href="user">Your Profile</a></li>
+<body class="bg-slate-100">
+    <ul class="flex p-5 m-2 bg-white drop-shadow-lg border-2 
+                border-double border-indigo-500 rounded-md text-xl">
+        <li class="p-3 text-slate-400 hover:text-sky-400"><a href="/">Home</a></li>
+        <li class="p-3 text-slate-400 hover:text-sky-400"><a href="login">Login or Sign Up</a></li>
+        <li class="p-3 text-slate-400 hover:text-sky-400"><a href="user">Your Profile</a></li>
     </ul>
     <main>
         {{{body}}}
     </main>
-    <footer>
+    <footer class="p-5">
         <p>&copy; 2024</p>
     </footer>
 </body>
