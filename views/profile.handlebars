@@ -1,0 +1,30 @@
+<section>
+    <h2>Create Post</h2>
+    <form class="form create-form p-5 bg-slate-100 w-96 rounded-lg">
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input class="form-input p-1" type="text" id="title" />
+            <label for="content">Content:</label>
+            <textarea class="form-input" id="content" rows="4" cols="50"></textarea>
+        </div>
+        <button class="p-2 m-2 bg-white border-solid round"id="submit">Submit</button>
+        </form>
+</section>
+<section class="flex">
+    <div class="p-5 mx-10 my-2  bg-white drop-shadow-lg border-2 border-double 
+                    border-indigo-500 rounded-md text-blue-500">
+    <h2 class="text-xl underline">Here is a list of {{username}}'s recent posts!</h2>
+              {{!-- i need to put the blog posts here --}}
+    {{#each blogs as |post|}}
+        <h3 class="text-lg p-2">Title:{{post.title}}</h3>
+        <p class="p-5">{{post.content}}</p>
+    {{/each}}        
+    </div>  
+</section>
+
+
+
+<button class="p-3 text-sky-400 hover:text-blue-500"><a href="#" id="logout">Logout</a></button>
+
+<script src="/js/logout.js"></script>
+<script src="/js/newpost.js"></script>

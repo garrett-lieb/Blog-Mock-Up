@@ -4,13 +4,17 @@
                 text-center text-4xl text-white">
                 H o m e p a g e</h1>
     
-    <p class="p-5 mx-10 my-2  bg-white drop-shadow-lg border-2 border-double 
-                    border-indigo-500 rounded-md text-blue-500">Here is a list of some recent posts!</p>
-    {{!-- i need to put the blog posts here --}}
-    {{#each posts as |post|}}
-        <h2>{{title}}</h2>
-        <p>{{body}}</p>
-    {{/each}}
+    <div class="p-5 mx-10 my-2  bg-white drop-shadow-lg border-2 border-double 
+                    border-indigo-500 rounded-md text-blue-500">
+    <h2 class="text-xl underline">Here is a list of some recent posts!</h2>
+              {{!-- i need to put the blog posts here --}}
+    {{#each blogs as |post|}}
+        <h3 class="text-lg p-2">Title:{{post.title}}</h3>
+        <p class="p-5">{{post.content}}</p>
+    {{/each}}        
+    </div>  
+    
+
 
 
     
