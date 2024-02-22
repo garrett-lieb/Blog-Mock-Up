@@ -8,8 +8,8 @@
         <h3 class="text-lg bold p-2">Title:{{post.title}}</h3>
         <p class="p-5">{{post.content}}</p>
         <p class="p-5 underline">{{formatDate post.date_created}}</p>
-                {{#each comments as |comment|}}
-            <p class="text-lg p-2">Comment(s):{{comment.comment}}</p>
+               <h4>Comment(s):</h4>{{#each comments as |comment|}}
+            <p class="text-lg p-2">{{comment.comment}}</p>
         {{/each}}
     {{/each}}       
      </section>
