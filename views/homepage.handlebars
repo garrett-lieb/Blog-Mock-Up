@@ -11,7 +11,9 @@
     {{#each blogs as |post|}}
         <h3 class="text-lg p-2">Title:{{post.title}}</h3>
         <p class="p-5">{{post.content}}</p>
-        <p class="p-5">{{post.date_created}}</p>
+        <p class="p-5">Posted: {{formatDate post.date_created}}</p>
+        {{!-- i need to put the comments here? --}}
+        <p class="text-lg p-2">Comment(s):</p>
     {{/each}}        
     </div>  
     

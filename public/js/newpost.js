@@ -17,4 +17,4 @@ const newposthandler = async (event) => {
     }
 };
 
-document.querySelector('.create-form').addEventListener('click', newposthandler);
+document.querySelector('.create-form').addEventListener('submit', newposthandler);
