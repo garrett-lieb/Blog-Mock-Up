@@ -8,7 +8,9 @@
         <p class="p-5">{{post.content}}</p>
         <p class="p-5">{{formatDate post.date_created}}</p>
 <!-- i need to put the comments here? -->
-       
+               {{#each comments as |comment|}}
+            <p class="text-lg p-2">Comment(s):{{comment.comment}}</p>
+        {{/each}}
     {{/each}}        
     </div>  
 </section>

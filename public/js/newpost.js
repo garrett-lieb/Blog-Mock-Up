@@ -3,7 +3,7 @@ const newposthandler = async (event) => {
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
     if (title && content) {
-        const response = await fetch('/', {
+        const response = await fetch('/api/blogs', {
             method: 'POST',
             body: JSON.stringify({ title, content }),
             headers: { 'Content-Type': 'application/json' },
