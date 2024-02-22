@@ -15,6 +15,7 @@ const newuserHandler = async (event) => {
             alert('Failed to create user');
         }
     }
+    console.log('username:', username);
 };
 
 document.querySelector('.signup-form').addEventListener('submit', newuserHandler);
