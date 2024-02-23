@@ -1,17 +1,7 @@
-<section class="flex">
-    <div class="p-5 mx-10 my-2  bg-white drop-shadow-lg border-2 border-double 
+{{!-- need to make blog content corresponding to id in url populate this page --}}
+<section class="p-5 mx-10 my-2  bg-white drop-shadow-lg border-2 border-double 
                     border-indigo-500 rounded-md text-blue-500">
-
-        {{!-- i need to put the blog posts here --}}
-        <section class="border-4 border-double rounded-md">
-            {{#each blogs as |post|}}
-            <h1 class="text-lg bold p-2">Title:{{post.title}}</h1>
-            <p class="p-5">{{post.content}}</p>
-            <p class="p-5 underline">{{formatDate post.date_created}}</p>
-            <h2>Comment(s):</h2>{{#each comments as |comment|}}
-            <p class="text-lg p-2">{{comment.comment}}</p>
-            {{/each}}
-            {{/each}}
-        </section>
-    </div>
+        <h1>{{title}}</h1>
+        <p>{{content}}</p>
+        <p>{{post.comment}}</p>
 </section>
