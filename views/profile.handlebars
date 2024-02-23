@@ -12,18 +12,18 @@
         <button class="p-2 m-2 bg-white border-solid round"id="submit">Submit</button>
         </form>
 </section>
-<section class="flex">
+<section class="">
     <div class="p-5 mx-10 my-2  bg-white drop-shadow-lg border-2 border-double 
                     border-indigo-500 rounded-md text-blue-500">
     <h2 class="text-xl underline">Here is a list of {{username}}'s recent posts!</h2>
               {{!-- i need to put the blog posts here --}}
-    <section class="border-4 border-double rounded-md">
+    <section class="block border-4 border-double rounded-md">
     {{#each blogs as |post|}}
-        <h3 class="text-lg bold p-2">Title:{{post.title}}</h3>
+        <h3 class="text-lg bold p-2 border-2 rounded-md bg-slate-100">Title: {{post.title}}</h3>
+        <p class="p-5 underline">Date Posted:{{formatDate post.date_created}}</p>
         <p class="p-5">{{post.content}}</p>
-        <p class="p-5 underline">{{formatDate post.date_created}}</p>
-                <h4>Comment(s):</h4>{{#each comments as |comment|}}
-            <p class="text-lg p-2">{{comment.comment}}</p>
+        <h4 class="w-1/2 border-2 rounded-md bg-slate-100">Comment(s):</h4>{{#each comments as |comment|}}
+            <p class="text-lg p-2 border-bottom">{{comment.comment}}</p>
         {{/each}}
     {{/each}}       
      </section>     
