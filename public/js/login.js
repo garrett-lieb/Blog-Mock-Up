@@ -20,3 +20,5 @@ const loginHandler = async (event) => {
 };
 
 document.querySelector('.login-form').addEventListener('submit', loginHandler);
+
+<form class="form login-form p-5 bg-slate-100 w-80 rounded-lg"></form>
