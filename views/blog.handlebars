@@ -1,10 +1,12 @@
 {{!-- need to make blog content corresponding to id in url populate this page --}}
 <section class="p-5 mx-10 my-2  bg-white drop-shadow-lg border-2 border-double 
                     border-indigo-500 rounded-md text-blue-500">
+    
     <h1 class="text-lg">Title: {{title}}</h1>
     <p class="bg-slate-100 p-10">Body: {{content}}</p>
      <form class="form comment-form p-5 borde-4 border-violet rounded-lg">
-    <h4 class="border-2 rounded-md bg-slate-100">Comment(s):</h4>{{#each comments as |comment|}}
+    <h4 class="border-2 rounded-md bg-slate-100">Comment(s):</h4>
+    {{#each comments as |comment|}}
     <p class="text-lg p-2 border-bottom">{{comment.comment}}</p>
     {{/each}}
     <div class="flex p-5 form-group">
