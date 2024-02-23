@@ -15,6 +15,25 @@ router.get('/', async (req, res) => {
     }
 });
 
+// get one post
+
+router.get('/:id', async (req, res) => {
+    try {
+        const blogData = await Blog.findByPk(req.params.id, {
+            include: [{ model: Comment }],
+        });
+
+        if (!blogData) {
+            res.status(404).json({ message: 'No blog found with this id!' });
+            return;
+        }
+
+        res.status(200).json(blogData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 router.post('/', withAuth, async (req, res) => {
     try {
         const newBlog = await Blog.create({
