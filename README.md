@@ -21,14 +21,6 @@ Users must create an account and be logged in to post and comment. Links are pro
 Edits to routing and models were achieved with the assistance of EdX bootcamp tutor Rene Trevino on Feb 14 and 21 of 2024.
 EdX Bootcamp TA Alexander Yu assisted in debugging JavaScript for creating new posts. 
 
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](://shielhttpsds.io/). You may not understand what they all represent now, but you will in time.
-
-
 ## License
 
 MIT License
