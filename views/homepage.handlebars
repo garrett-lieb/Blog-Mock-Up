@@ -16,6 +16,8 @@
                     <a href="/blogs/{{post.id}}">{{post.title}}</a>
                     <p class="p-5 underline">Date Posted:{{formatDate post.date_created}}</p>
                     <p class="p-5">{{post.content}}</p>
+                    {{! add user's name to the post}}
+                    <p class="p-5">Posted By: User {{post.user_id}}</p>
                     {{/each}}
             </section>
         </section>
