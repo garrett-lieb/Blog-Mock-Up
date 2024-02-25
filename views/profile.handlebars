@@ -29,6 +29,16 @@
             <p class="text-lg p-2 border-bottom">{{comment.comment}}</p>
             {{/each}}
             {{/each}}
+            {{! -- add delete button for each post --}}
+            <form action="delete-form">
+                <button class="p-2 m-2 bg-white border-solid round" id="delete">Delete</button>
+            </form>
+
+            {{!-- add edit button for each post --}}
+            <form action="edit-form">
+                <button class="p-2 m-2 bg-white border-solid round" id="edit">Edit</button>
+            </form>
+
         </section>
     </div>
 </section>

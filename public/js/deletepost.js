@@ -1,10 +1,10 @@
-const newposthandler = async (event) => {
+const deleteosthandler = async (event) => {
     event.preventDefault();
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
     if (title && content) {
-        const response = await fetch('/api/blogRoutes', {
-            method: 'POST',
+        const response = await fetch('/api/blogs', {
+            method: 'DELETE',
             body: JSON.stringify({ title, content }),
             headers: { 'Content-Type': 'application/json' },
         });
@@ -17,4 +17,4 @@ const newposthandler = async (event) => {
     }
 };
 
-document.querySelector('.create-form').addEventListener('submit', newposthandler);
+document.querySelector('.delete-form').addEventListener('delete', newposthandler);
